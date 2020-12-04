@@ -80,5 +80,4 @@ function checkEcl(eclString) {
 
 function checkPid(pidString) {
   return /^[0-9]{9}$/.test(pidString)
-
 }
