@@ -1,4 +1,6 @@
-const INPUT = require('./readInput')('09.input')
+import { readInput } from './utils/readInput'
+
+const INPUT = readInput('09.input')
 
 const PREAMBLE_SIZE = 25
 
@@ -34,9 +36,11 @@ function findInvalid() {
     preamble.shift()
     preamble.push(currentNumber)
   }
+
+  throw new Error('Didn\'t find invalid number')
 }
 
-function isValid(number) {
+function isValid(number: number) {
   for (let a = 0; a < preamble.length; a++) {
     for (let b = a + 1; b < preamble.length; b++) {
       if (preamble[a] + preamble[b] === number) {

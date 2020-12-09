@@ -1,6 +1,8 @@
-const INPUT = require('./readInput')('03.input')
+import { readInput } from './utils/readInput'
 
-const slopes = [
+const INPUT = readInput('03.input')
+
+const slopes: [number, number][] = [
   [1,1],
   [3,1],
   [5,1],
@@ -12,7 +14,7 @@ const product = treeCounts.reduce((product, currentValue) => product * currentVa
 
 console.log(product)
 
-function checkSlope(slope) {
+function checkSlope(slope: [number, number]) {
   let currentX = 0
   let treeCount = 0
 

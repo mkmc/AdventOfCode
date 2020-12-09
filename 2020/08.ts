@@ -1,8 +1,10 @@
-const INPUT = require('./readInput')('08.input')
+import { readInput } from './utils/readInput'
+
+const INPUT = readInput('08.input')
 
 let currentLineNumber = 0
 let acc = 0
-let visitedLines = {}
+let visitedLines: Record<string, boolean> = {}
 
 for (let i = 0; i < INPUT.length; i++) {
   const inputCopy = [...INPUT]
@@ -22,7 +24,7 @@ for (let i = 0; i < INPUT.length; i++) {
   }
 }
 
-function executeProgram(program) {
+function executeProgram(program: string[]) {
   currentLineNumber = 0
   acc = 0
   visitedLines = {}
@@ -38,7 +40,7 @@ function executeProgram(program) {
   return currentLineNumber === program.length
 }
 
-function executeCmd(cmd, parameter) {
+function executeCmd(cmd: string, parameter: number) {
   switch(cmd) {
     case 'nop':
       currentLineNumber++
@@ -53,7 +55,7 @@ function executeCmd(cmd, parameter) {
   }
 }
 
-function parseLine(line) {
+function parseLine(line: string) {
   const [cmd, parameterString] = line.split(' ')
   return { cmd, parameter: parseInt(parameterString) }
 }

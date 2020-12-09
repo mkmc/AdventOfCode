@@ -1,7 +1,11 @@
-const INPUT = require('./readInput')('07.input')
+import { readInput } from './utils/readInput'
 
-const parentMap = {}
-const childMap = {}
+const INPUT = readInput('07.input')
+
+type Child = { count: number, color: string }
+
+const parentMap: Record<string, string[]> = {}
+const childMap: Record<string, Child[]> = {}
 
 INPUT.forEach(rule => {
   const node = parseRule(rule)
@@ -17,13 +21,13 @@ INPUT.forEach(rule => {
 console.log('Part 1:', traverseUp('shiny gold').size)
 console.log('Part 2:', traverseDown('shiny gold') - 1)
 
-function parseRule(rule) {
+function parseRule(rule: string) {
   const [color, containing] = rule.split(' bags contain ')
 
   if (containing === 'no other bags.') {
     return { color, children: [] }
   } else {
-    let children = []
+    let children: Child[] = []
 
     const components = containing.split(', ')
     components.forEach(component => {
@@ -38,7 +42,7 @@ function parseRule(rule) {
   }
 }
 
-function traverseUp(color) {
+function traverseUp(color: string) {
   let bags = new Set()
 
   if (!parentMap[color]) {
@@ -53,7 +57,7 @@ function traverseUp(color) {
   return bags
 }
 
-function traverseDown(color) {
+function traverseDown(color: string) {
   let sum = 1
 
   if (!childMap[color]) {

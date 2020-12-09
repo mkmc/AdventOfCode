@@ -1,4 +1,7 @@
-const INPUT = require('./readInput')('06.input')
+import { readInput } from './utils/readInput'
+
+const INPUT = readInput('06.input')
+
 
 {
   let currentGroup = new Set()

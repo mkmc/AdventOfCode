@@ -1,4 +1,6 @@
-const INPUT = require('./readInput')('05.input')
+import { readInput } from './utils/readInput'
+
+const INPUT = readInput('05.input')
 
 const seatIDs = INPUT.map(boardingPassCode => {
   let minRow = 0
