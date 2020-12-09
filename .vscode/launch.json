@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug current file",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "args": ["${file}"],
+      "cwd": "${workspaceRoot}/${relativeFileDirname}"
+    }
+  ]
+}

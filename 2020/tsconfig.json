@@ -7,8 +7,9 @@
     "baseUrl": ".",
     "strict": true,
     "noImplicitAny": true,
+    "sourceMap": true,
   },
   "include": [
-    "**.ts", "utils/readInput.ts"
+    "*.ts"
   ]
 }
