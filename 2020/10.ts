@@ -19,14 +19,12 @@ console.log(differences, differences[1] * differences[3])
 
 console.log('PART – 2')
 
-const extendedInput = [0,...parsedInput, parsedInput[parsedInput.length] + 3]
+const extendedInput = [0, ...parsedInput, parsedInput[parsedInput.length - 1] + 3]
 const counter: Record<number, number> = {0: 1}
 
-for (let i = 0; i <= extendedInput.length; i++) {
-  let j = i + 1
-  while (extendedInput[j] <= extendedInput[i] + 3) {
+for (let i = 0; i < extendedInput.length - 1; i++) {
+  for (let j = i + 1; extendedInput[j] - extendedInput[i] <= 3; j++) {
     counter[j] = (counter[j] || 0) + counter[i]
-    j++
   }
 }
 
