@@ -37,11 +37,10 @@ INPUT[0]
 
 for (let day = 0; day < 256; day++) {
   let newFishCount = fishPerDay[0]
-  let resetFishCount = fishPerDay[0]
   for (let i = 1; i <= 8; i++) {
     fishPerDay[i - 1] = fishPerDay[i]
   }
-  fishPerDay[6] += resetFishCount
+  fishPerDay[6] += newFishCount
   fishPerDay[8] = newFishCount
 }
 
