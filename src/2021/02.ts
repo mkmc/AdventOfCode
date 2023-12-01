@@ -1,4 +1,4 @@
-import { readInput } from './utils/readInput'
+import { readInput } from '../utils/readInput'
 
 const INPUT = readInput('2021/02.input')
 

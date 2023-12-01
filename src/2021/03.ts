@@ -1,4 +1,4 @@
-import { readInput } from './utils/readInput'
+import { readInput } from '../utils/readInput'
 
 type Bit = '0' | '1'
 

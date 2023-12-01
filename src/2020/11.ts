@@ -1,4 +1,4 @@
-import { readInput } from './utils/readInput'
+import { readInput } from '../utils/readInput'
 
 const enum TileType { FLOOR = '.', EMPTY = 'L', OCCUPIED = '#' }
 type NeighborFunction = (layout: TileType[][], x: number, y: number) => TileType[]

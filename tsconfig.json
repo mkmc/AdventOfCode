@@ -2,14 +2,15 @@
   "compilerOptions": {
     "module": "commonjs",
     "esModuleInterop": true,
-    "target": "es6",
+    "target": "es2021",
     "moduleResolution": "node",
     "baseUrl": ".",
     "strict": true,
     "noImplicitAny": true,
     "sourceMap": true,
+    "outDir": "dist",
+    "lib": ["ESNext"]
   },
-  "include": [
-    "**/*.ts"
-  ]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

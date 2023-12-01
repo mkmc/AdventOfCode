@@ -1,4 +1,4 @@
-import { readInput } from './utils/readInput'
+import { readInput } from '../utils/readInput'
 
 type Orientation = 'N' | 'E' | 'S' | 'W'
 type Rotation = 'L' | 'R'
