@@ -1,0 +1,29 @@
+{
+  "Advent of Code Template": {
+    "prefix": "adventofcode",
+    "body": [
+      "import { readInput } from '../utils/readInput'",
+      "",
+      "function solvePart1(input: string[]): number {",
+      "  return 0",
+      "}",
+      "",
+      "function solvePart2(input: string[]): number {",
+      "  return 0",
+      "}",
+      "",
+      "const TEST_INPUT = ``.split('\\n')",
+      "",
+      "const INPUT = readInput('src/2023/${1:date}.input')",
+      "",
+      "console.log('Test input')",
+      "console.log('Part 1:', solvePart1(TEST_INPUT))",
+      "console.log('Part 2:', solvePart2(TEST_INPUT))",
+      "",
+      "console.log('Real input')",
+      "console.log('Part 1:', solvePart1(INPUT))",
+      "console.log('Part 2:', solvePart2(INPUT))"
+    ],
+    "description": "Template for Advent of Code problems with date input"
+  }
+}
