@@ -1,3 +1,4 @@
+import { sum } from '../utils/sum'
 import { readInput } from '../utils/readInput'
 
 const DIGIT_MAPPING: { [key: string]: number } = {
@@ -47,10 +48,6 @@ function getCalibrationValuePart2(line: string): number {
     : parseInt(lastMatch)
 
   return parseInt(`${firstDigit}${lastDigit}`)
-}
-
-function sum(values: number[]): number {
-  return values.reduce((total, v) => total + v, 0)
 }
 
 function solvePart1(input: string[]): number {
