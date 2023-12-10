@@ -96,11 +96,11 @@ function solvePart2(input: string[]): number {
     for (let x = 0; x < row.length; x++) {
       if (row[x] === '.') {
         grid[y][x] = inside ? 'I' : 'O'
-      } else if (previous === 'F' && row[x] === 'J') {
-        previous = ''
-      } else if (previous === 'L' && row[x] === '7') {
-        previous = ''
-      } else if (row[x] !== '-') {
+      } else if (
+        !(previous === 'F' && row[x] === 'J') &&
+        !(previous === 'L' && row[x] === '7') &&
+        row[x] !== '-'
+      ) {
         inside = !inside
         previous = row[x]
       }
